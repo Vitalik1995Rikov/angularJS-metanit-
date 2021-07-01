@@ -7,10 +7,20 @@
     <title>angular</title>
 </head>
 <body>
+
     <div ng-controller="phoneController">
         <p>Название: {{phone.name}}</p>
         <p>Цена: {{phone.price}} $</p>
         <p>Производитель: {{phone.company.name}}</p>
+    </div>
+
+    <div ng-controller="phoneController">
+        <p>Производитель: {{phone.company.country}}</p>
+    </div>
+
+    <div ng-controller='myController as myCtrl'>
+        <p>{{myCtrl.message}}</p>
+        <p>{{myCtrl.text}}</p>
     </div>
 </body>
 </html>
