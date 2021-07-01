@@ -1,20 +1,11 @@
 let myApp=angular.module('myApp', []);
 
 
-myApp.controller('phoneController', function($scope) {
-  $scope.phone = {
-        name: 'Nokia Lumia 630',
-        year: 2014,
-        price: 200,
-        company: {
-            name: 'Nokia',
-            country: 'Финляндия'
-        }
-    }
+myApp.run(function($rootScope) {
+    $rootScope.moduleName = 'myApp';
+    $rootScope.message = 'Hello AngularJS';
 });
 
-
-myApp.controller('myController', function() {
-    this.message ='myController';
-    this.text ='Контроллер без $scope';
+myApp.controller('myController', function($scope) {
+    $scope.message = 'Контроллер myController';
 });
