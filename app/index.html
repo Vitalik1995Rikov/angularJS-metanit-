@@ -3,24 +3,34 @@
 <head>
     <meta charset="utf-8">
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
-    <script type="text/javascript" src="script.js"></script>
+    <script type="text/javascript" src="js/controllers/script.js"></script>
     <title>angular</title>
 </head>
 <body>
     <div ng-controller="phoneController">
-
-        <!-- односторонняя привязка -->
-        <p>Количество элементов: <span ng-bind='phones.length'></span></p>
-        <p>Первый элемент: <span ng-bind='phones[0].name'></span></p>
-        
-        <!-- двусторонняя привязка -->
-        <input type="text" ng-model="phones[2].name"> 
-        <p>{{phones[2].name}}</p>
-
-        <!-- не использует привязку, отключает вычисление -->
-        <p>{{1 + 2}}</p>
-        <p ng-non-bindable>{{1 + 2}}</p>
-
+        <div ng-switch on="data.mode">
+            <div ng-switch-when="Tablets">
+                <ul>
+                    <li ng-repeat="tablet in tablets">
+                    <b>{{tablet.name}}</b>
+                    <p>Цена: {{tablet.price}} $</p>
+                    <p>Производитель: {{tablet.company}}</p>
+                    </li>
+                </ul>
+            </div>
+            <div ng-switch-when="Phones">
+                <ul>
+                    <li ng-repeat="phone in phones">
+                    <b>{{phone.name}}</b>
+                    <p>Цена: {{phone.price}} $</p>
+                    <p>Производитель: {{phone.company}}</p>
+                    </li>
+                </ul>
+            </div>
+            <div ng-switch-default>
+                Выберите товары для просмотра
+            </div>
+        </div>
     </div>
 </body>
 </html>
