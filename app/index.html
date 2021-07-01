@@ -8,13 +8,19 @@
 </head>
 <body>
     <div ng-controller="phoneController">
-        <ul>
-            <li ng-repeat="phone in phones">
-                <p>{{phone.name}}</p>
-                <p>Price: {{phone.price}}</p>
-                <p>Country: {{phone.company.country}}</p>
-            </li>
-        </ul>
+
+        <!-- односторонняя привязка -->
+        <p>Количество элементов: <span ng-bind='phones.length'></span></p>
+        <p>Первый элемент: <span ng-bind='phones[0].name'></span></p>
+        
+        <!-- двусторонняя привязка -->
+        <input type="text" ng-model="phones[2].name"> 
+        <p>{{phones[2].name}}</p>
+
+        <!-- не использует привязку, отключает вычисление -->
+        <p>{{1 + 2}}</p>
+        <p ng-non-bindable>{{1 + 2}}</p>
+
     </div>
 </body>
 </html>

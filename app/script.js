@@ -25,5 +25,14 @@ myApp.controller('phoneController', function($scope) {
                 name: 'Xiaomi',
                 country: 'Китай'
             }
+        },
+        {
+            name: 'Samsung Galaxy S 8',
+            year: 2019,
+            price: 600,
+            company: {
+                name: 'Samsung',
+                country: 'Республика Корея'
+            }
         }]
     });
