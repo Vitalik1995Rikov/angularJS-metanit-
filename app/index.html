@@ -1,0 +1,16 @@
+<!doctype html>
+<html ng-app="myApp">
+<head>
+    <meta charset="utf-8">
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+    <script type="text/javascript" src="script.js"></script>
+    <title>angular</title>
+</head>
+<body>
+    <div ng-controller="phoneController">
+        <p>Название: {{phone.name}}</p>
+        <p>Цена: {{phone.price}} $</p>
+        <p>Производитель: {{phone.company.name}}</p>
+    </div>
+</body>
+</html>
