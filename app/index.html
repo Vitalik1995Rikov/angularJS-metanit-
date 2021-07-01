@@ -7,17 +7,14 @@
     <title>angular</title>
 </head>
 <body>
-    
-    <div>
-        <p>Модуль:{{moduleName}}</p>
-        <p>Сообщение:{{message}}</p>
+    <div ng-controller="phoneController">
+        <ul>
+            <li ng-repeat="phone in phones">
+                <p>{{phone.name}}</p>
+                <p>Price: {{phone.price}}</p>
+                <p>Country: {{phone.company.country}}</p>
+            </li>
+        </ul>
     </div>
-
-    <div ng-controller="myController">
-        <p>{{message}}</p>
-    </div>
-
-    <p>{{message}}</p>
-    
 </body>
 </html>
