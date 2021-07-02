@@ -33,21 +33,21 @@ questApp.controller('QuestionController', function($scope) {
     };
 });
 
-questApp.filter('formatText', function() {
-    return function(text) {
-        if(text.indexOf('фигасе') !== -1) {
-            return '***';
-        } else {
-            return text;
-        }
-    }
-});
+// questApp.filter('formatText', function() {
+//     return function(text) {
+//         if(text.indexOf('фигасе') !== -1) {
+//             return '***';
+//         } else {
+//             return text;
+//         }
+//     }
+// });
 
-questApp.controller('AnswerController', function AnswerController($scope) {
-    $scope.save = function (answer, answerForm) {
-        if (answerForm.$valid) {
-            alert(answer.author + ', Your answer was saved')
-        }
-    }
-});
+// questApp.controller('AnswerController', function AnswerController($scope) {
+//     $scope.save = function (answer, answerForm) {
+//         if (answerForm.$valid) {
+//             alert(answer.author + ', Your answer was saved')
+//         }
+//     }
+// });
 
