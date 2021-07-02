@@ -1,0 +1,12 @@
+# AngularJS
+## задача - изучить основы
+## источник - сайт Metanit.com
+
++ модули
++ контроллеры 
++ scope
++ ng-repeat
++ ng-switch
++ ng-if
++ ng-show
++ фильтры
