@@ -1,6 +1,38 @@
-.myclass {
-    padding: 20px;
-    margin: 20px;
-    background-color: aqua;
-    color: blue;
+.quest {
+    border-bottom: 1px solid #aaa; 
+    margin-bottom: 10px; 
+}
+.questcolor {
+    background: #F6F6F6;
+}
+.questselectedcolor{ 
+    background: #ddd;
+}
+.answer {
+    border-bottom: 1px solid #ccc; 
+    margin-bottom: 10px;
+}
+.vote {
+    float: left; 
+    text-align: center; 
+    width: 21px; 
+    margin-right: 20px;
+}
+.vote-up, .vote-down{
+    display: block;
+    margin: 0px auto;
+    width: 30px;
+    height: 30px;
+}
+.vote-up{
+    background-position: -20px -5px;
+    background-image: url("../img/sprite.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
+}
+.vote-down{
+    background-position: -10px -10px;
+    background-image: url("../img/spriteDown.png");
+    background-repeat: no-repeat;
+    overflow: hidden;
 }

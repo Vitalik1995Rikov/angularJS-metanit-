@@ -8,23 +8,26 @@
     <title>angular</title>
 </head>
 <body>
-    <div ng-controller="phoneController">
-
-        <!-- Для стилей -->
-        <div ng-style='somestyle'>Директива ng-style</div>
-        <div ng-class='someclass'>Директива ng-class</div>
-
-        <!-- Для отображения -->
-        <p ng-show='data.visible'>Первый блок</p>
-
-        <!-- Для скрытия -->
-        <p ng-hide='data.visible'>Второй блок</p>
-
-        <input type="checkbox" ng-model='data.visible'>Открыть/Скрыть
-
-        <!-- ng-if -->
-        <p ng-if='data.visible'>First block</p>
-        <p ng-if='!data.visible'>Second block</p>
+    <div ng-controller="QuestionController">
+        <div class="quest" ng-class="questColorClass"
+            ng-mouseenter="changeClass($event)"
+            ng-mouseleave="changeClass($event)">
+            <h3>{{question.text}}</h3>
+            <p>{{question.author}} </p> <p><i>{{question.date}}</i></p>
+        </div>
+    <h3>Ответы</h3>
+    <div class="answers">
+        <div ng-repeat="answer in question.answers" class="answer">
+            <div class="vote">
+                <a class="vote-up" ng-click="voteUp(answer)"></a>
+                <span class="rate">{{answer.rate}}</span>
+                <a class="vote-down" ng-click="voteDown(answer)"></a>
+            </div>
+            <b>{{answer.text}}</b>
+            <p>{{answer.author}}</p>
+            <p><i>{{answer.date}}</i></p>
+        </div>
+    </div>
     </div>
 </body>
 </html>
