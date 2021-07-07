@@ -23,16 +23,5 @@
     margin: 0px auto;
     width: 30px;
     height: 30px;
-}
-.vote-up{
-    background-position: -20px -5px;
-    background-image: url("../img/sprite.png");
-    background-repeat: no-repeat;
-    overflow: hidden;
-}
-.vote-down{
-    background-position: -10px -10px;
-    background-image: url("../img/spriteDown.png");
-    background-repeat: no-repeat;
-    overflow: hidden;
+    background-color: aqua;
 }
